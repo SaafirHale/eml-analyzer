@@ -1,4 +1,3 @@
-import jsQR from "jsqr";
 import type { DecodedImage, ImageDecoder } from "./types.js";
 
 /**
@@ -35,7 +34,9 @@ export const browserImageDecoder: ImageDecoder = async (bytes, mimeType) => {
   }
 };
 
-export function decodeQr(img: DecodedImage): string | undefined {
+/** jsQR is loaded on first use, so pages that never see an image never download it. */
+export async function decodeQr(img: DecodedImage): Promise<string | undefined> {
+  const { default: jsQR } = await import("jsqr");
   const res = jsQR(img.data, img.width, img.height, { inversionAttempts: "attemptBoth" });
   return res?.data || undefined;
 }

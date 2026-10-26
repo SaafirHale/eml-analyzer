@@ -323,7 +323,7 @@ export async function analyzeEml(
           notes.push(`QR decoding is unavailable in this environment; ${c.label} was not scanned.`);
           continue;
         }
-        const data = decodeQr(img);
+        const data = await decodeQr(img);
         if (data) qr.push({ image: c.label, data, isUrl: /^(https?:\/\/|www\.)/i.test(data.trim()) });
       } catch {
         notes.push(`${c.label} could not be decoded as an image.`);
@@ -381,7 +381,7 @@ export async function analyzeEml(
     for (const where of lk.where) {
       const id = `lookalike.${where.toLowerCase().replace(/[^a-z]+/g, "-")}`;
       const weight = where === "From" ? 35 : where === "link" || where === "QR code" || where === "redirect target" ? 25 : 20;
-      add(id, "lookalike", weight, `${where} domain imitates ${lk.resembles}`, `${lk.domain}${shown} resembles ${lk.resembles}: ${how}${lk.distance ? `, ${lk.distance} edit${lk.distance > 1 ? "s" : ""} away` : ""}.`);
+      add(id, "lookalike", weight, `${where[0]!.toUpperCase()}${where.slice(1)} domain imitates ${lk.resembles}`, `${lk.domain}${shown} resembles ${lk.resembles}: ${how}${lk.distance ? `, ${lk.distance} edit${lk.distance > 1 ? "s" : ""} away` : ""}.`);
     }
   }
 

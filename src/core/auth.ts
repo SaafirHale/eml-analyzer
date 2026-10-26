@@ -7,7 +7,7 @@
  * are the ones added by the mailbox's own gateway.
  */
 
-import { domainOf, orgDomain, sameOrg } from "./domains.js";
+import { domainOf, sameOrg } from "./domains.js";
 import type {
   ArcSet,
   AuthMethodName,
@@ -320,7 +320,6 @@ export function analyzeAuth(headers: HeaderField[], fromAddress: string | undefi
       method: "dmarc",
       verdict: v,
       domain,
-      aligned: domain && fromDomain ? orgDomain(domain) === orgDomain(fromDomain) : undefined,
       explanation: explainDmarc(v, domain, policyFrom(dmarc)),
     });
   } else {

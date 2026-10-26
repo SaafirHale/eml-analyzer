@@ -1,0 +1,109 @@
+/* Stand-in for the host site: the same tokens saafirhale.com defines in globals.css. */
+
+:root {
+  --bg: #e9e8e5;
+  --fg: #111111;
+  --fg2: #3a3936;
+  --muted: #646360;
+  --line: #cfcdc8;
+  --accent: #1d4ed8;
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --bg: #0f0f0e;
+  --fg: #eceae5;
+  --fg2: #b9b7b1;
+  --muted: #8e8c86;
+  --line: #2c2b29;
+  --accent: #ff4a3d;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+a {
+  color: var(--fg);
+}
+
+.demo-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 40px);
+}
+
+.demo-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 20px 0;
+}
+.demo-mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 15px;
+}
+.demo-theme {
+  font: inherit;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--fg);
+  cursor: pointer;
+  padding: 0;
+}
+.demo-theme:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.demo-hero {
+  padding: clamp(40px, 6vw, 80px) 0 clamp(32px, 4vw, 56px);
+  border-top: 1px solid var(--fg);
+}
+.demo-h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(44px, 7vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+.demo-lede {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  max-width: 52ch;
+  margin: 24px 0 0;
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+.demo-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 20px 0 32px;
+  color: var(--muted);
+}
