@@ -1,0 +1,81 @@
+Received: from mx1.example.com (mx1.example.com [192.0.2.25])
+	by mbx01.example.com with ESMTPS id 3Pq0zz for <jordan.lee@example.com>;
+	Fri, 23 Oct 2026 07:55:03 +0000
+Authentication-Results: mbx01.example.com;
+	spf=pass (sender IP is 198.51.100.140) smtp.mailfrom=notifications@benefits-portal.test;
+	dkim=none (no signature);
+	dmarc=none header.from=benefits-portal.test
+Received: from out-3.benefits-portal.test (out-3.benefits-portal.test [198.51.100.140])
+	by mx1.example.com with ESMTP id 7Lm2qq for <jordan.lee@example.com>;
+	Fri, 23 Oct 2026 07:55:01 +0000
+Return-Path: <notifications@benefits-portal.test>
+From: HR Benefits Team <notifications@benefits-portal.test>
+To: Jordan Lee <jordan.lee@example.com>
+Subject: MFA re-enrollment required for your benefits account
+Date: Fri, 23 Oct 2026 07:54:58 +0000
+Message-ID: <mfa-8f31c2@benefits-portal.test>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="qr-rel-8f31"
+
+--qr-rel-8f31
+Content-Type: text/html; charset=utf-8
+
+<html><body style="font-family:Arial,sans-serif">
+<p>Your multi-factor authentication for the benefits portal must be re-enrolled before Friday.</p>
+<p>Scan the QR code below with your phone camera to continue.</p>
+<p><img src="cid:mfa-qr@benefits-portal.test" alt="QR code" width="174" height="174"></p>
+<p>HR Benefits Team</p>
+</body></html>
+
+--qr-rel-8f31
+Content-Type: image/png; name="mfa-enroll.png"
+Content-Transfer-Encoding: base64
+Content-ID: <mfa-qr@benefits-portal.test>
+Content-Disposition: inline; filename="mfa-enroll.png"
+
+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
+
+--qr-rel-8f31--

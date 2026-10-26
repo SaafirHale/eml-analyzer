@@ -1,0 +1,61 @@
+{
+  "name": "@saafirhale/eml-analyzer",
+  "version": "0.1.0",
+  "description": "Phishing email analyzer that runs entirely in the browser. Headers, authentication, lookalike domains, links, attachments and QR codes from a single .eml.",
+  "license": "MIT",
+  "author": "Saafir Hale",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    },
+    "./styles.css": "./dist/react/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build-lib.mjs",
+    "build:demo": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "samples": "node scripts/make-samples.mjs"
+  },
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "postal-mime": "^4.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/pngjs": "^6.0.5",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

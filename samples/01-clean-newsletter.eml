@@ -1,0 +1,81 @@
+Received: from relay.example.com (relay.example.com [192.0.2.10])
+	by mbx01.example.com with ESMTPS id 7Hq2Lm for <jordan.lee@example.com>;
+	Mon, 19 Oct 2026 14:02:07 +0000
+Authentication-Results: mbx01.example.com;
+	spf=pass (sender IP is 198.51.100.27) smtp.mailfrom=bounces.esp-mailer.example;
+	dkim=pass (2048-bit key) header.d=fieldnotes.example header.s=fn1;
+	dmarc=pass (p=QUARANTINE sp=QUARANTINE pct=100) header.from=fieldnotes.example;
+	arc=pass (i=1)
+ARC-Seal: i=1; a=rsa-sha256; t=1792418525; cv=none; d=example.com; s=arc2026;
+	b=SYNTHETICARCSEALVALUE0000000000000000000000000000000000000000000000
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=example.com; s=arc2026;
+	h=from:to:subject:date:message-id; bh=SYNTHETICBODYHASH000000000000000000000=;
+	b=SYNTHETICARCSIGNATURE00000000000000000000000000000000000000000000000
+ARC-Authentication-Results: i=1; relay.example.com;
+	spf=pass smtp.mailfrom=bounces.esp-mailer.example;
+	dkim=pass header.d=fieldnotes.example header.s=fn1;
+	dmarc=pass header.from=fieldnotes.example
+Received: from mta7.esp-mailer.example (mta7.esp-mailer.example [198.51.100.27])
+	by relay.example.com with ESMTPS id 3kQx9P for <jordan.lee@example.com>;
+	Mon, 19 Oct 2026 14:02:05 +0000
+Received: from app-04.internal.esp-mailer.example (unknown [10.20.4.14])
+	by mta7.esp-mailer.example with ESMTP id 9aa1c4;
+	Mon, 19 Oct 2026 14:01:58 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fieldnotes.example; s=fn1;
+	h=from:to:subject:date:message-id:list-unsubscribe;
+	bh=SYNTHETICBODYHASH000000000000000000000=; b=SYNTHETICDKIMSIGNATURE000000000000000000
+Return-Path: <bounce-7731-jordan.lee=example.com@bounces.esp-mailer.example>
+From: Field Notes Weekly <digest@news.fieldnotes.example>
+To: Jordan Lee <jordan.lee@example.com>
+Subject: Field Notes Weekly - Issue 42: autumn trail maps
+Date: Mon, 19 Oct 2026 14:01:57 +0000
+Message-ID: <20261019140157.7731.42@news.fieldnotes.example>
+List-Unsubscribe: <https://fieldnotes.example/unsubscribe?id=7731>, <mailto:unsubscribe@fieldnotes.example>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="fn-alt-7731"
+
+--fn-alt-7731
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Field Notes Weekly - Issue 42
+
+This week: trail maps for the autumn season, a gear checklist, and reader photos.
+
+Read the issue: https://fieldnotes.example/issues/42
+Manage your subscription: https://fieldnotes.example/account/preferences
+
+You are receiving this because you subscribed at fieldnotes.example.
+Unsubscribe: https://fieldnotes.example/unsubscribe?id=7731
+
+--fn-alt-7731
+Content-Type: multipart/related; boundary="fn-rel-7731"
+
+--fn-rel-7731
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<!doctype html><html><body style="font-family:Arial,sans-serif">
+<img src="cid:logo-7731@news.fieldnotes.example" alt="Field Notes" width="48" height="48">
+<h1>Field Notes Weekly &mdash; Issue 42</h1>
+<p>This week: trail maps for the autumn season, a gear checklist, and reader photos.</p>
+<p><a href="https://fieldnotes.example/issues/42?utm_source=newsletter&amp;utm_medium=email">Read issue 42</a></p>
+<p><a href="https://fieldnotes.example/issues/42/gear-checklist">The gear checklist</a></p>
+<p style="font-size:11px;color:#666">You are receiving this because you subscribed at fieldnotes.example.
+<a href="https://fieldnotes.example/account/preferences">Manage preferences</a> &middot;
+<a href="https://fieldnotes.example/unsubscribe?id=7731">Unsubscribe</a></p>
+</body></html>
+
+--fn-rel-7731
+Content-Type: image/png; name="logo.png"
+Content-Transfer-Encoding: base64
+Content-ID: <logo-7731@news.fieldnotes.example>
+Content-Disposition: inline; filename="logo.png"
+
+iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAZUlEQVR4AdXBAQEAIAyAME4SoxjF
+/iV8DrY5737CJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7iJE7i
+JE7iJE7iJE7iJE7iJE7iJE7iJE7iJG4BG34CH6agQ1UAAAAASUVORK5CYII=
+--fn-rel-7731--
+
+--fn-alt-7731--
