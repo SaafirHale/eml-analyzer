@@ -4,6 +4,11 @@
   "description": "Phishing email analyzer that runs entirely in the browser. Headers, authentication, lookalike domains, links, attachments and QR codes from a single .eml.",
   "license": "MIT",
   "author": "Saafir Hale",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaafirHale/eml-analyzer.git"
+  },
+  "homepage": "https://github.com/SaafirHale/eml-analyzer#readme",
   "type": "module",
   "sideEffects": [
     "*.css"

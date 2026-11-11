@@ -1,8 +1,8 @@
 # Portfolio entry (draft)
 
 Draft for `src/content/projects.ts` in the saafirhale.com repo, in the shape of its `Project` type.
-Every claim below can be checked against this repository. Fill in `links` and switch `status` to
-`"live"` once the repo is public and the tool is mounted at `/tools/eml`.
+Every claim below can be checked against this repository. The repo is public, so `status` is
+`"live"`; add a second link once the tool is mounted at `/tools/eml`.
 
 ```ts
 {
@@ -17,8 +17,8 @@ Every claim below can be checked against this repository. Fill in `links` and sw
     "Every finding becomes a weighted signal, and the sum gives a verdict from low risk to likely phishing. The report exports as Markdown for a ticket, with every URL defanged, or as JSON. Nothing is uploaded and the message HTML is never rendered. It is a framework-agnostic TypeScript core with a React component, tested with Vitest against a corpus of five synthetic messages: a clean newsletter, a display-name CEO spoof, a credential phish on a lookalike domain, an HTML-smuggling attachment and a QR-code phish.",
   ],
   stack: ["TypeScript", "React", "postal-mime", "jsQR", "Web Crypto", "Vitest", "Vite"],
-  links: [],
-  status: "personal",
+  links: [{ label: "GitHub", href: "https://github.com/SaafirHale/eml-analyzer" }],
+  status: "live",
 }
 ```
 
